@@ -1,3 +1,5 @@
+/* TABLE DEFINITIONS */
+
 CREATE TABLE series (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(50),
@@ -47,3 +49,19 @@ CREATE TABLE characters (
     series_id TINYINT(1),
     link VARCHAR(2083)
 );
+
+/* Supporting tables for many-many relationships */
+
+CREATE TABLE series_genres (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    series_id INT,
+    genre_id INT
+);
+
+CREATE TABLE series_creator (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    series_id INT,
+    creator_id INT
+)
+
+
