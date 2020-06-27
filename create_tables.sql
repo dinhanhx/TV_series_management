@@ -45,8 +45,8 @@ CREATE TABLE actors (
 CREATE TABLE characters (
     id INT AUTO_INCREMENT PRIMARY KEY,
     character_name VARCHAR(50),
-    actor_id CHAR(3),
-    series_id TINYINT(1),
+    actor_id CHAR(3) NOT NULL,
+    series_id TINYINT(1) NOT NULL,
     link VARCHAR(2083)
 );
 
@@ -54,14 +54,40 @@ CREATE TABLE characters (
 
 CREATE TABLE series_genres (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    series_id INT,
-    genre_id INT
+    series_id INT NOT NULL,
+    genre_id INT NOT NULL
 );
 
 CREATE TABLE series_creator (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    series_id INT,
-    creator_id INT
-)
+    series_id INT NOT NULL,
+    creator_id INT NOT NULL
+);
 
+ALTER TABLE episodes
+ADD CONSTRAINT FK_episodes_series
+FOREIGN KEY (series_id) REFERENCES series(id);
 
+ALTER TABLE characters
+ADD CONSTRAINT FK_characters_actors
+FOREIGN KEY (actor_id) REFERENCES actors(id);
+
+ALTER TABLE characters
+ADD CONSTRAINT FK_characters_series
+FOREIGN KEY (series_id) REFERENCES series(id);
+
+ALTER TABLE series_genres
+ADD CONSTRAINT FK_series_genres_L
+FOREIGN KEY (series_id) REFERENCES series(id);
+
+ALTER TABLE series_genres
+ADD CONSTRAINT FK_series_genres_R
+FOREIGN KEY (genre_id) REFERENCES genres(id);
+
+ALTER TABLE series_creators
+ADD CONSTRAINT FK_series_creators_L
+FOREIGN KEY (series_id) REFERENCES series(id);
+
+ALTER TABLE series_creators
+ADD CONSTRAINT FK_series_creators_R
+FOREIGN KEY (creator_id) REFERENCES creators(id);
