@@ -64,15 +64,15 @@ CREATE TABLE characters (
 /* Supporting tables for many-many relationships */
 
 CREATE TABLE series_genres (
-    id INT AUTO_INCREMENT PRIMARY KEY,
     series_id INT NOT NULL,
-    genre_id INT NOT NULL
+    genre_id INT NOT NULL,
+    PRIMARY KEY (series_id, genre_id)
 );
 
 CREATE TABLE series_creator (
-    id INT AUTO_INCREMENT PRIMARY KEY,
     series_id INT NOT NULL,
-    creator_id INT NOT NULL
+    creator_id INT NOT NULL,
+    PRIMARY KEY (series_id, creator_id)
 );
 
 ALTER TABLE episodes
