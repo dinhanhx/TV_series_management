@@ -25,6 +25,7 @@ CREATE TABLE episodes (
     series_id INT,
     episode_name VARCHAR(50),
     episode_number INT,
+    season_number INT,
     duration INT,
     release_date DATE,
     link VARCHAR(2083)
