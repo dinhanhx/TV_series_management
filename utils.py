@@ -33,11 +33,41 @@ def get_episodes(i):
     except:
         pass
 
+def to_iso_5218(gender):
+    if gender == 'Male': return 1
+    if gender == 'Female': return 2
+    if gender == 'Not applicable': return 9
+
+    return 0
+
+def get_creators(i):
+    """
+    Get tv series' creators then make sql statement to insert into table creators
+    """
+    def get_code(obj):
+        if obj is not None: return obj['code']
+
+        return None
+
+    try:
+        r = requests.get(f'http://api.tvmaze.com/shows/{i}/crew')
+        data = r.json()[0]['person']
+        return f"INSERT INTO creators (first_name, last_name, nationality, gender, " \
+        f"link) VALUES ('{data['name'].split()[0]}', '{data['name'].split()[1]}', " \
+        f"'{get_code(data['country'])}', {to_iso_5218(data['gender'])}, " \
+        f"'{data['url']}');"
+
+    except:
+        pass
 
 if __name__ == '__main__':
-    f = open('insert_into_tables.sql', 'w', encoding = 'utf-8')
-    for i in range(1, 11):
-        f.write(get_series(i))
-        f.write(get_episodes(i))
+    # f = open('insert_into_tables.sql', 'w', encoding = 'utf-8')
+    # for i in range(1, 11):
+    #     f.write(get_series(i))
+    #     f.write(get_episodes(i))
+    #     f.write(get_creators(i))
+    #
+    # f.close()
 
-    f.close()
+    for i in range(1, 11):
+        print()
