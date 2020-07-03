@@ -22,7 +22,7 @@ CREATE TABLE series (
 
 CREATE TABLE episodes (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    seriesid INT,
+    series_id INT,
     episode_name VARCHAR(50),
     episode_number INT,
     duration INT,
