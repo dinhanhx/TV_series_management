@@ -1,3 +1,14 @@
+/* Drop tables if exist */
+DROP TABLE IF EXISTS series_creators;
+DROP TABLE IF EXISTS series_genres;
+DROP TABLE IF EXISTS characters;
+DROP TABLE IF EXISTS actors;
+DROP TABLE IF EXISTS creators;
+DROP TABLE IF EXISTS genres;
+DROP TABLE IF EXISTS episodes;
+DROP TABLE IF EXISTS series;
+
+
 /* TABLE DEFINITIONS */
 
 CREATE TABLE series (
