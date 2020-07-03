@@ -70,7 +70,7 @@ CREATE TABLE series_genres (
     PRIMARY KEY (series_id, genre_id)
 );
 
-CREATE TABLE series_creator (
+CREATE TABLE series_creators (
     series_id INT NOT NULL,
     creator_id INT NOT NULL,
     PRIMARY KEY (series_id, creator_id)
