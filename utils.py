@@ -60,14 +60,22 @@ def get_creators(i):
     except:
         pass
 
+def get_series_creators(i):
+    """
+    Make sql statement to insert into table series_creators
+    """
+    return f"INSERT INTO series_creators (series_id, creator_id) VALUES " \
+    f"({i}, {i})"
+
 if __name__ == '__main__':
     # f = open('insert_into_tables.sql', 'w', encoding = 'utf-8')
     # for i in range(1, 11):
     #     f.write(get_series(i))
     #     f.write(get_episodes(i))
     #     f.write(get_creators(i))
+    #     f.write(get_series_creators(i))
     #
     # f.close()
 
     for i in range(1, 11):
-        print()
+        print(get_series_creators(i))
