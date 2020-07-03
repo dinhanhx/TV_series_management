@@ -56,8 +56,8 @@ CREATE TABLE actors (
 CREATE TABLE characters (
     id INT AUTO_INCREMENT PRIMARY KEY,
     character_name VARCHAR(50),
-    actor_id CHAR(3) NOT NULL,
-    series_id TINYINT(1) NOT NULL,
+    actor_id INT NOT NULL,
+    series_id INT NOT NULL,
     link VARCHAR(2083)
 );
 
