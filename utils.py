@@ -108,22 +108,31 @@ def get_actors_characters(i_start, ii_end):
     return sql
 
 def get_genres():
-	return f"INSERT INTO genres(genre_name) VALUES ('Action'), ('Adult'), ('Adventure'), ('Anime'), ('Children'), ('Comedy'), ('Crime'), ('DIY'), ('Drama'), ('Espisonage'), ('Family'), ('Food'), ('History'), ('Horror'), ('Legal'), ('Medical'), ('Music'), ('Mystery'), ('Nature'), ('Romance'), ('Science-Fiction'), ('Supernatural'), ('Thriller'), ('Travel'), ('War'), ('Western')"
+	return f"INSERT INTO genres(genre_name) VALUES " \
+    f"('Action'), ('Adult'), ('Adventure'), ('Anime'), ('Children'), "\
+    f"('Comedy'), ('Crime'), ('DIY'), ('Drama'), ('Espisonage'), ('Family'), "\
+    f"('Food'), ('History'), ('Horror'), ('Legal'), ('Medical'), ('Music'), ('Mystery'), "\
+    f"('Nature'), ('Romance'), ('Science-Fiction'), ('Supernatural'), ('Thriller'), ('Travel'), ('War'), ('Western');\n"
 
 def get_genres_id(i):
-	#try:
+	try:
 		sql = f""
 		r = requests.get(f'http://api.tvmaze.com/shows/{i}')
 		data = r.json()
-		genre = ['Action', 'Adult', 'Adventure', 'Anime', 'Children', 'Comedy', 'Crime', 'DIY', 'Drama', 'Espionage', 'Family', 'Food', 'History', 'Horror', 'Legal', 'Medical', 'Music', 'Mystery', 'Nature', 'Romance', 'Science-Fiction', 'Supernatural', 'Thriller', 'Travel', 'War', 'Western']
+		genre = ['Action', 'Adult', 'Adventure', 'Anime', 'Children', \
+                'Comedy', 'Crime', 'DIY', 'Drama', 'Espionage', 'Family', \
+                'Food', 'History', 'Horror', 'Legal', 'Medical', 'Music', 'Mystery', \
+                'Nature', 'Romance', 'Science-Fiction', 'Supernatural', 'Thriller', 'Travel', 'War', 'Western']
+
 		id_genre = [i for i in range(1, len(genre) + 1)]
 		n = data['genres']
 		for x in range(len(n)):
 			sql = sql + f"INSERT INTO series_genres(series_id,genre_id)" \
 			f" VALUES ({i}), ({id_genre[genre.index(n[x])]})\n"
+
 		return sql
-	#except:
-	 	#pass 
+	except:
+	 	pass
 
 if __name__ == '__main__':
     f = open('insert_into_tables.sql', 'w', encoding = 'utf-8')
@@ -134,5 +143,6 @@ if __name__ == '__main__':
         f.write(get_creators(i))
         f.write(get_series_creators(i))
         f.write(get_genres_id(i))
+
     f.write(get_actors_characters(1, 11))
     f.close()
