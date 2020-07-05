@@ -11,12 +11,19 @@ def get_series(i):
     """
     Get tv series then make sql statement to insert into table series
     """
+    def get_status(status):
+        if status == 'In Development': return 'D'
+        if status == 'Ended': return 'E'
+        if status == 'Running': return 'R'
+
+        return 'X'
+
     try:
         r = requests.get(f'http://api.tvmaze.com/shows/{i}')
         data = r.json()
         return f"INSERT INTO series (title, lang, current_status, rating, link) " \
                 f"VALUES ('{sqr(data['name'])}', '{to_iso639_1(data['language'])}', " \
-                f"'{data['status']}', {data['rating']['average']}, '{data['url']}');\n"
+                f"'{get_status(data['status'])}', {data['rating']['average']}, '{data['url']}');\n"
     except:
         pass
 
@@ -46,14 +53,19 @@ def to_iso_5218(gender):
 
     return 0
 
+def to_iso_3166_alpha_3(country):
+    from iso3166 import countries
+    return countries.get(country)[2]
+
+
 def get_creators(i):
     """
     Get tv series' creators then make sql statement to insert into table creators
     """
     def get_code(obj):
-        if obj is not None: return obj['code']
+        if obj is not None: return to_iso_3166_alpha_3(obj['code'])
 
-        return None
+        return 'N/A'
 
     try:
         r = requests.get(f'http://api.tvmaze.com/shows/{i}/crew')
@@ -79,9 +91,9 @@ def get_actors_characters(i_start, ii_end):
     then make sql statement to insert into table actors and characters
     """
     def get_code(obj):
-        if obj is not None: return obj['code']
+        if obj is not None: return to_iso_3166_alpha_3(obj['code'])
 
-        return None
+        return 'N/A'
 
     counter = 0
     sql = f""
