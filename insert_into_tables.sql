@@ -1,4 +1,4 @@
-INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Under the Dome', 'en', 'Ended', 6.5, 'http://www.tvmaze.com/shows/1/under-the-dome');
+INSERT INTO genres(genre_name) VALUES ('Action'), ('Adult'), ('Adventure'), ('Anime'), ('Children'), ('Comedy'), ('Crime'), ('DIY'), ('Drama'), ('Espisonage'), ('Family'), ('Food'), ('History'), ('Horror'), ('Legal'), ('Medical'), ('Music'), ('Mystery'), ('Nature'), ('Romance'), ('Science-Fiction'), ('Supernatural'), ('Thriller'), ('Travel'), ('War'), ('Western')INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Under the Dome', 'en', 'Ended', 6.5, 'http://www.tvmaze.com/shows/1/under-the-dome');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (1, 'Pilot', 1, 1, 60, 2013-06-24,  'http://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (1, 'The Fire', 2, 1, 60, 2013-07-01,  'http://www.tvmaze.com/episodes/2/under-the-dome-1x02-the-fire');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (1, 'Manhunt', 3, 1, 60, 2013-07-08,  'http://www.tvmaze.com/episodes/3/under-the-dome-1x03-manhunt');
@@ -40,6 +40,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (1, 'The Enemy Within', 13, 3, 60, 2015-09-10,  'http://www.tvmaze.com/episodes/185054/under-the-dome-3x13-the-enemy-within');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('Stephen', 'King', 'US', 1, 'http://www.tvmaze.com/people/15/stephen-king');
 INSERT INTO series_creators (series_id, creator_id) VALUES (1, 1);
+INSERT INTO series_genres(series_id,genre_id) VALUES (1), (9)
+INSERT INTO series_genres(series_id,genre_id) VALUES (1), (21)
+INSERT INTO series_genres(series_id,genre_id) VALUES (1), (23)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Person of Interest', 'en', 'Ended', 8.9, 'http://www.tvmaze.com/shows/2/person-of-interest');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (2, 'Pilot', 1, 1, 60, 2011-09-22,  'http://www.tvmaze.com/episodes/28/person-of-interest-1x01-pilot');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (2, 'Ghosts', 2, 1, 60, 2011-09-29,  'http://www.tvmaze.com/episodes/29/person-of-interest-1x02-ghosts');
@@ -146,6 +149,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (2, 'return 0', 13, 5, 60, 2016-06-21,  'http://www.tvmaze.com/episodes/659372/person-of-interest-5x13-return-0');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('Jonathan', 'Nolan', 'GB', 1, 'http://www.tvmaze.com/people/94/jonathan-nolan');
 INSERT INTO series_creators (series_id, creator_id) VALUES (2, 2);
+INSERT INTO series_genres(series_id,genre_id) VALUES (2), (1)
+INSERT INTO series_genres(series_id,genre_id) VALUES (2), (7)
+INSERT INTO series_genres(series_id,genre_id) VALUES (2), (21)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Bitten', 'en', 'Ended', 7.6, 'http://www.tvmaze.com/shows/3/bitten');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (3, 'Summons', 1, 1, 60, 2014-01-11,  'http://www.tvmaze.com/episodes/100/bitten-1x01-summons');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (3, 'Prodigal', 2, 1, 60, 2014-01-18,  'http://www.tvmaze.com/episodes/101/bitten-1x02-prodigal');
@@ -182,6 +188,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (3, 'Truth, Changes, Everything', 10, 3, 60, 2016-04-15,  'http://www.tvmaze.com/episodes/631862/bitten-3x10-truth-changes-everything');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('J.B.', 'Sugar', 'None', 1, 'http://www.tvmaze.com/people/177/jb-sugar');
 INSERT INTO series_creators (series_id, creator_id) VALUES (3, 3);
+INSERT INTO series_genres(series_id,genre_id) VALUES (3), (9)
+INSERT INTO series_genres(series_id,genre_id) VALUES (3), (14)
+INSERT INTO series_genres(series_id,genre_id) VALUES (3), (20)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Arrow', 'en', 'Ended', 7.4, 'http://www.tvmaze.com/shows/4/arrow');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (4, 'Pilot', 1, 1, 60, 2012-10-10,  'http://www.tvmaze.com/episodes/113/arrow-1x01-pilot');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (4, 'Honor Thy Father', 2, 1, 60, 2012-10-17,  'http://www.tvmaze.com/episodes/114/arrow-1x02-honor-thy-father');
@@ -355,6 +364,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (4, 'Fadeout', 10, 8, 60, 2020-01-28,  'http://www.tvmaze.com/episodes/1744752/arrow-8x10-fadeout');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('David', 'Nutter', 'US', 1, 'http://www.tvmaze.com/people/282/david-nutter');
 INSERT INTO series_creators (series_id, creator_id) VALUES (4, 4);
+INSERT INTO series_genres(series_id,genre_id) VALUES (4), (9)
+INSERT INTO series_genres(series_id,genre_id) VALUES (4), (1)
+INSERT INTO series_genres(series_id,genre_id) VALUES (4), (21)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('True Detective', 'en', 'To Be Determined', 8.2, 'http://www.tvmaze.com/shows/5/true-detective');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (5, 'The Long Bright Dark', 1, 1, 60, 2014-01-12,  'http://www.tvmaze.com/episodes/167/true-detective-1x01-the-long-bright-dark');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (5, 'Seeing Things', 2, 1, 60, 2014-01-19,  'http://www.tvmaze.com/episodes/168/true-detective-1x02-seeing-things');
@@ -382,6 +394,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (5, 'Now Am Found', 8, 3, 76, 2019-02-24,  'http://www.tvmaze.com/episodes/1590271/true-detective-3x08-now-am-found');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('Matthew', 'McConaughey', 'US', 1, 'http://www.tvmaze.com/people/672/matthew-mcconaughey');
 INSERT INTO series_creators (series_id, creator_id) VALUES (5, 5);
+INSERT INTO series_genres(series_id,genre_id) VALUES (5), (9)
+INSERT INTO series_genres(series_id,genre_id) VALUES (5), (7)
+INSERT INTO series_genres(series_id,genre_id) VALUES (5), (23)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('The 100', 'en', 'Running', 7.8, 'http://www.tvmaze.com/shows/6/the-100');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (6, 'Pilot', 1, 1, 60, 2014-03-19,  'http://www.tvmaze.com/episodes/175/the-100-1x01-pilot');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (6, 'Earth Skills', 2, 1, 60, 2014-03-26,  'http://www.tvmaze.com/episodes/176/the-100-1x02-earth-skills');
@@ -478,6 +493,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (6, 'The Flock', 9, 7, 60, 2020-07-15,  'http://www.tvmaze.com/episodes/1837826/the-100-7x09-the-flock');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('Sarah', 'Fain', 'None', 2, 'http://www.tvmaze.com/people/793/sarah-fain');
 INSERT INTO series_creators (series_id, creator_id) VALUES (6, 6);
+INSERT INTO series_genres(series_id,genre_id) VALUES (6), (1)
+INSERT INTO series_genres(series_id,genre_id) VALUES (6), (3)
+INSERT INTO series_genres(series_id,genre_id) VALUES (6), (21)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Homeland', 'en', 'Ended', 8.3, 'http://www.tvmaze.com/shows/7/homeland');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (7, 'Pilot', 1, 1, 60, 2011-10-02,  'http://www.tvmaze.com/episodes/189/homeland-1x01-pilot');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (7, 'Grace', 2, 1, 60, 2011-10-09,  'http://www.tvmaze.com/episodes/190/homeland-1x02-grace');
@@ -577,6 +595,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (7, 'Prisoners of War', 12, 8, 70, 2020-04-26,  'http://www.tvmaze.com/episodes/1801029/homeland-8x12-prisoners-of-war');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('Patrick', 'Harbinson', 'None', 1, 'http://www.tvmaze.com/people/103/patrick-harbinson');
 INSERT INTO series_creators (series_id, creator_id) VALUES (7, 7);
+INSERT INTO series_genres(series_id,genre_id) VALUES (7), (9)
+INSERT INTO series_genres(series_id,genre_id) VALUES (7), (23)
+INSERT INTO series_genres(series_id,genre_id) VALUES (7), (10)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Glee', 'en', 'Ended', 6.8, 'http://www.tvmaze.com/shows/8/glee');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (8, 'Pilot', 1, 1, 60, 2009-05-19,  'http://www.tvmaze.com/episodes/232/glee-1x01-pilot');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (8, 'Showmance', 2, 1, 60, 2009-09-09,  'http://www.tvmaze.com/episodes/233/glee-1x02-showmance');
@@ -701,6 +722,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (8, 'Dreams Come True', 13, 6, 60, 2015-03-20,  'http://www.tvmaze.com/episodes/142185/glee-6x13-dreams-come-true');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('Brad', 'Falchuk', 'US', 1, 'http://www.tvmaze.com/people/1031/brad-falchuk');
 INSERT INTO series_creators (series_id, creator_id) VALUES (8, 8);
+INSERT INTO series_genres(series_id,genre_id) VALUES (8), (9)
+INSERT INTO series_genres(series_id,genre_id) VALUES (8), (17)
+INSERT INTO series_genres(series_id,genre_id) VALUES (8), (20)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Revenge', 'en', 'Ended', 7.8, 'http://www.tvmaze.com/shows/9/revenge');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (9, 'Pilot', 1, 1, 60, 2011-09-21,  'http://www.tvmaze.com/episodes/341/revenge-1x01-pilot');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (9, 'Trust', 2, 1, 60, 2011-09-28,  'http://www.tvmaze.com/episodes/342/revenge-1x02-trust');
@@ -793,6 +817,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (9, 'Two Graves', 23, 4, 60, 2015-05-10,  'http://www.tvmaze.com/episodes/154117/revenge-4x23-two-graves');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('Mike', 'Kelley', 'None', 0, 'http://www.tvmaze.com/people/1191/mike-kelley');
 INSERT INTO series_creators (series_id, creator_id) VALUES (9, 9);
+INSERT INTO series_genres(series_id,genre_id) VALUES (9), (9)
+INSERT INTO series_genres(series_id,genre_id) VALUES (9), (23)
+INSERT INTO series_genres(series_id,genre_id) VALUES (9), (18)
 INSERT INTO series (title, lang, current_status, rating, link) VALUES ('Grimm', 'en', 'Ended', 8.5, 'http://www.tvmaze.com/shows/10/grimm');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (10, 'Pilot', 1, 1, 60, 2011-10-28,  'http://www.tvmaze.com/episodes/414/grimm-1x01-pilot');
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (10, 'Bears Will Be Bears', 2, 1, 60, 2011-11-04,  'http://www.tvmaze.com/episodes/415/grimm-1x02-bears-will-be-bears');
@@ -919,6 +946,9 @@ INSERT INTO episodes (series_id, episode_name, episode_number, season_number, du
 INSERT INTO episodes (series_id, episode_name, episode_number, season_number, duration, release_date, link) VALUES (10, 'The End', 13, 6, 60, 2017-03-31,  'http://www.tvmaze.com/episodes/1009811/grimm-6x13-the-end');
 INSERT INTO creators (first_name, last_name, nationality, gender, link) VALUES ('Stephen', 'Carpenter', 'None', 0, 'http://www.tvmaze.com/people/1522/stephen-carpenter');
 INSERT INTO series_creators (series_id, creator_id) VALUES (10, 10);
+INSERT INTO series_genres(series_id,genre_id) VALUES (10), (9)
+INSERT INTO series_genres(series_id,genre_id) VALUES (10), (7)
+INSERT INTO series_genres(series_id,genre_id) VALUES (10), (22)
 INSERT INTO actors (first_name, last_name, nationality, gender, link) VALUES ('Mackenzie', 'Lintz', 'US', 2, 'http://www.tvmaze.com/people/7/mackenzie-lintz');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Norrie Calvert-Hill', 1, 1, 'http://www.tvmaze.com/characters/7/under-the-dome-norrie-calvert-hill');
 INSERT INTO actors (first_name, last_name, nationality, gender, link) VALUES ('Dean', 'Norris', 'US', 1, 'http://www.tvmaze.com/people/9/dean-norris');
