@@ -69,21 +69,20 @@ def get_creators(i):
 
     try:
         r = requests.get(f'http://api.tvmaze.com/shows/{i}/crew')
-        data = r.json()[0]['person']
-        return f"INSERT INTO creators (id, first_name, last_name, nationality, gender, " \
-        f"link) VALUES ({data['id']}, '{sqr(data['name'].split()[0])}', '{sqr(data['name'].split()[-1])}', " \
-        f"'{get_code(data['country'])}', {to_iso_5218(data['gender'])}, " \
-        f"'{data['url']}');\n"
+        data = r.json()
+        data = list(filter(lambda person: person['type'] == 'Creator', data))
+        sql = ''
+        for person in data:
+            sql += f"INSERT INTO creators (id, first_name, last_name, nationality, gender, " \
+            f"link) VALUES ({person['id']}, '{sqr(person['name'].split()[0])}', '{sqr(person['name'].split()[-1])}', " \
+            f"'{get_code(person['country'])}', {to_iso_5218(person['gender'])}, " \
+            f"'{person['url']}');\n"
+            sql += f"INSERT INTO series_creators (series_id, creator_id) VALUES ({i}, {person['id']});\n"
+        return sql
 
     except:
         pass
 
-def get_series_creators(i):
-    """
-    Make sql statement to insert into table series_creators
-    """
-    return f"INSERT INTO series_creators (series_id, creator_id) VALUES " \
-    f"({i}, {i});\n"
 
 def get_actors_characters(series_list):
     """
@@ -139,8 +138,7 @@ def get_genres_id(i):
 		# id_genre = [i for i in range(1, len(genre) + 1)]
 		genres = data['genres']
 		for g in genres:
-			sql = sql + f"INSERT INTO series_genres(series_id,genre_id)" \
-			f" VALUES ({i}, {1 + genre.index(g)})\n"
+			sql = sql + f"INSERT INTO series_genres(series_id,genre_id) VALUES ({i}, {1 + genre.index(g)});\n"
 
 		return sql
 	except:
@@ -152,7 +150,7 @@ if __name__ == '__main__':
     series_list = list(range(1,11))
     series_list += [2102, 24665, 26950, 17861, 27436, 41748, 41749, 41750, 495,
                     19268, 32699, 2503, 21617, 37681, 555, 216, 31989]
-    get_list = [get_series, get_episodes, get_creators, get_series_creators, get_genres_id]
+    get_list = [get_series, get_episodes, get_creators, get_genres_id]
     for i in series_list:
         for func in get_list:
             if func(i) is not None:

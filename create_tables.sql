@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS series;
 
 CREATE TABLE series (
     id INT PRIMARY KEY,
-    title VARCHAR(50),
+    title VARCHAR(100),
     lang CHAR(2),
     current_status CHAR(1),
     rating DECIMAL(2, 1),
@@ -23,7 +23,7 @@ CREATE TABLE series (
 CREATE TABLE episodes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     series_id INT,
-    episode_name VARCHAR(50),
+    episode_name VARCHAR(100),
     episode_number INT,
     season_number INT,
     duration INT,
