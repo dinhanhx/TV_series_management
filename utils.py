@@ -85,7 +85,7 @@ def get_series_creators(i):
     return f"INSERT INTO series_creators (series_id, creator_id) VALUES " \
     f"({i}, {i});\n"
 
-def get_actors_characters(i_start, ii_end):
+def get_actors_characters(series_list):
     """
     Get tv series' actors and characters
     then make sql statement to insert into table actors and characters
@@ -97,7 +97,7 @@ def get_actors_characters(i_start, ii_end):
 
     counter = 0
     sql = f""
-    for i in range(i_start, ii_end):
+    for i in series_list:
         try:
             r = requests.get(f'http://api.tvmaze.com/shows/{i}/cast')
             list_data = r.json()
@@ -149,12 +149,14 @@ def get_genres_id(i):
 if __name__ == '__main__':
     f = open('insert_into_tables.sql', 'w', encoding = 'utf-8')
     f.write(get_genres())
-    for i in range(1, 11):
-        f.write(get_series(i))
-        f.write(get_episodes(i))
-        f.write(get_creators(i))
-        f.write(get_series_creators(i))
-        f.write(get_genres_id(i))
+    series_list = list(range(1,11))
+    series_list += [2102, 28946, 26950, 17861, 27436, 41748, 41749, 41750, 495,
+                    19268, 32699, 37599, 2503, 351702, 21617, 37681]
+    get_list = [get_series, get_episodes, get_creators, get_series_creators, get_genres_id]
+    for i in series_list:
+        for func in get_list:
+            if func(i) is not None:
+                f.write(func(i))
 
-    f.write(get_actors_characters(1, 11))
+    f.write(get_actors_characters(series_list))
     f.close()
