@@ -38,7 +38,7 @@ def get_episodes(i):
         for data in list_data:
             sql = sql + f"INSERT INTO episodes (series_id, episode_name, episode_number, " \
             f"season_number, duration, release_date, link) VALUES ({i}, '{sqr(data['name'])}', " \
-            f"{data['number']}, {data['season']}, {data['runtime']}, {data['airdate']},  "\
+            f"{data['number']}, {data['season']}, {data['runtime']}, \'{data['airdate']}\',  "\
             f"'{data['url']}');\n"
 
         return sql
