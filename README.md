@@ -10,7 +10,7 @@ In this project, we omit a lot of data from the original source. We also make so
 
 - Languages and countries are following ISO 639-1 and ISO 3166-1 alpha-3, respectively
 - Genders are represented by numbers instead of literal word
-- The ids are internal to our project and not related to the TVMaze's ids
+- The IDs, except for series IDs and real person's (i.e. cast and crew) IDs, are internal to our project and not related to the TVMaze's ids
 
 All these changes are also published under CC-BY-SA 4.0.
 

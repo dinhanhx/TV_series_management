@@ -21,8 +21,8 @@ def get_series(i):
     try:
         r = requests.get(f'http://api.tvmaze.com/shows/{i}')
         data = r.json()
-        return f"INSERT INTO series (title, lang, current_status, rating, link) " \
-                f"VALUES ('{sqr(data['name'])}', '{to_iso639_1(data['language'])}', " \
+        return f"INSERT INTO series (id, title, lang, current_status, rating, link) " \
+                f"VALUES ({data['id']}, '{sqr(data['name'])}', '{to_iso639_1(data['language'])}', " \
                 f"'{get_status(data['status'])}', {data['rating']['average']}, '{data['url']}');\n"
     except:
         pass
@@ -49,9 +49,9 @@ def get_episodes(i):
 def to_iso_5218(gender):
     if gender == 'Male': return 1
     if gender == 'Female': return 2
-    if gender == 'Not applicable': return 9
+    if gender == 'Unknown' or gender is None: return 0
 
-    return 0
+    return 9
 
 def to_iso_3166_alpha_3(country):
     from iso3166 import countries
@@ -70,8 +70,8 @@ def get_creators(i):
     try:
         r = requests.get(f'http://api.tvmaze.com/shows/{i}/crew')
         data = r.json()[0]['person']
-        return f"INSERT INTO creators (first_name, last_name, nationality, gender, " \
-        f"link) VALUES ('{sqr(data['name'].split()[0])}', '{sqr(data['name'].split()[-1])}', " \
+        return f"INSERT INTO creators (id, first_name, last_name, nationality, gender, " \
+        f"link) VALUES ({data['id']}, '{sqr(data['name'].split()[0])}', '{sqr(data['name'].split()[-1])}', " \
         f"'{get_code(data['country'])}', {to_iso_5218(data['gender'])}, " \
         f"'{data['url']}');\n"
 
@@ -104,8 +104,8 @@ def get_actors_characters(series_list):
             for data in list_data:
                 counter = counter + 1
                 person = data['person']
-                sql = sql + f"INSERT INTO actors (first_name, last_name, nationality, " \
-                f"gender, link) VALUES ('{sqr(person['name'].split()[0])}', '{sqr(person['name'].split()[-1])}', " \
+                sql = sql + f"INSERT INTO actors (id, first_name, last_name, nationality, " \
+                f"gender, link) VALUES ({data['id']}, '{sqr(person['name'].split()[0])}', '{sqr(person['name'].split()[-1])}', " \
                 f"'{get_code(person['country'])}', {to_iso_5218(person['gender'])}, '{person['url']}');\n"
 
                 character = data['character']

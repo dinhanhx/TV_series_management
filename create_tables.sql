@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS series;
 /* TABLE DEFINITIONS */
 
 CREATE TABLE series (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     title VARCHAR(50),
     lang CHAR(2),
     current_status CHAR(1),
@@ -37,7 +37,7 @@ CREATE TABLE genres (
 );
 
 CREATE TABLE creators (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     first_name VARCHAR(20),
     last_name VARCHAR(20),
     nationality CHAR(3),
@@ -46,7 +46,7 @@ CREATE TABLE creators (
 );
 
 CREATE TABLE actors (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     first_name VARCHAR(20),
     last_name VARCHAR(20),
     nationality CHAR(3),
