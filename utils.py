@@ -101,14 +101,12 @@ def get_actors_characters(series_list):
 
         return 'N/A'
 
-    counter = 0
     sql = f""
     for i in series_list:
         try:
             r = requests.get(f'http://api.tvmaze.com/shows/{i}/cast')
             list_data = r.json()
             for data in list_data:
-                counter = counter + 1
                 person = data['person']
                 sql = sql + f"INSERT INTO actors (id, first_name, last_name, nationality, " \
                 f"gender, link) VALUES ({person['id']}, '{sqr(person['name'].split()[0])}', '{sqr(person['name'].split()[-1])}', " \
