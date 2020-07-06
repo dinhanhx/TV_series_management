@@ -150,8 +150,8 @@ if __name__ == '__main__':
     f = open('insert_into_tables.sql', 'w', encoding = 'utf-8')
     f.write(get_genres())
     series_list = list(range(1,11))
-    series_list += [2102, 28946, 26950, 17861, 27436, 41748, 41749, 41750, 495,
-                    19268, 32699, 37599, 2503, 351702, 21617, 37681]
+    series_list += [2102, 24665, 26950, 17861, 27436, 41748, 41749, 41750, 495,
+                    19268, 32699, 2503, 351702, 21617, 37681, 555, 216, 31989]
     get_list = [get_series, get_episodes, get_creators, get_series_creators, get_genres_id]
     for i in series_list:
         for func in get_list:
