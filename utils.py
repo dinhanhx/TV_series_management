@@ -121,7 +121,7 @@ def get_actors_characters(series_list):
 
 def get_genres():
 	return f"INSERT INTO genres(genre_name) VALUES " \
-    f"('Action'), ('Adult'), ('Adventure'), ('Anime'), ('Children'), "\
+    f"('Action'), ('Adult'), ('Adventure'), ('Anime'), ('Children'), ('Fantasy'),"\
     f"('Comedy'), ('Crime'), ('DIY'), ('Drama'), ('Espisonage'), ('Family'), "\
     f"('Food'), ('History'), ('Horror'), ('Legal'), ('Medical'), ('Music'), ('Mystery'), "\
     f"('Nature'), ('Romance'), ('Science-Fiction'), ('Supernatural'), ('Thriller'), ('Travel'), ('War'), ('Western');\n"
@@ -131,16 +131,16 @@ def get_genres_id(i):
 		sql = f""
 		r = requests.get(f'http://api.tvmaze.com/shows/{i}')
 		data = r.json()
-		genre = ['Action', 'Adult', 'Adventure', 'Anime', 'Children', \
+		genre = ['Action', 'Adult', 'Adventure', 'Anime', 'Children', 'Fantasy',\
                 'Comedy', 'Crime', 'DIY', 'Drama', 'Espionage', 'Family', \
                 'Food', 'History', 'Horror', 'Legal', 'Medical', 'Music', 'Mystery', \
                 'Nature', 'Romance', 'Science-Fiction', 'Supernatural', 'Thriller', 'Travel', 'War', 'Western']
 
-		id_genre = [i for i in range(1, len(genre) + 1)]
-		n = data['genres']
-		for x in range(len(n)):
+		# id_genre = [i for i in range(1, len(genre) + 1)]
+		genres = data['genres']
+		for g in genres:
 			sql = sql + f"INSERT INTO series_genres(series_id,genre_id)" \
-			f" VALUES ({i}), ({id_genre[genre.index(n[x])]})\n"
+			f" VALUES ({i}, {1 + genre.index(g)})\n"
 
 		return sql
 	except:
@@ -151,7 +151,7 @@ if __name__ == '__main__':
     f.write(get_genres())
     series_list = list(range(1,11))
     series_list += [2102, 24665, 26950, 17861, 27436, 41748, 41749, 41750, 495,
-                    19268, 32699, 2503, 351702, 21617, 37681, 555, 216, 31989]
+                    19268, 32699, 2503, 21617, 37681, 555, 216, 31989]
     get_list = [get_series, get_episodes, get_creators, get_series_creators, get_genres_id]
     for i in series_list:
         for func in get_list:
