@@ -6012,7 +6012,7 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Samantha "Root" Groves', 91, 2, 'http://www.tvmaze.com/characters/67/person-of-interest-samantha-root-groves');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (92, 'Sarah', 'Shahi', 'USA', 2, 'http://www.tvmaze.com/people/92/sarah-shahi');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Sameen Shaw', 92, 2, 'http://www.tvmaze.com/characters/27030/person-of-interest-sameen-shaw');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (91, 'Amy', 'Acker', 'USA', 2, 'http://www.tvmaze.com/people/91/amy-acker');
+
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('The Machine', 91, 2, 'http://www.tvmaze.com/characters/552012/person-of-interest-the-machine');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (172, 'Laura', 'Vandervoort', 'CAN', 2, 'http://www.tvmaze.com/people/172/laura-vandervoort');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Elena Michaels', 172, 3, 'http://www.tvmaze.com/characters/125/bitten-elena-michaels');
@@ -6048,7 +6048,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Dinah Drake / Black Canary', 34387, 4, 'http://www.tvmaze.com/characters/369222/arrow-dinah-drake-black-canary');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (281, 'John', 'Barrowman', 'GBR', 1, 'http://www.tvmaze.com/people/281/john-barrowman');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Malcolm Merlyn', 281, 4, 'http://www.tvmaze.com/characters/212/arrow-malcolm-merlyn');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (272, 'Katie', 'Cassidy', 'USA', 2, 'http://www.tvmaze.com/people/272/katie-cassidy');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Laurel Lance (Earth Two) / Black Siren', 272, 4, 'http://www.tvmaze.com/characters/373737/arrow-laurel-lance-earth-two-black-siren');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (279, 'Susanna', 'Thompson', 'USA', 2, 'http://www.tvmaze.com/people/279/susanna-thompson');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Moira Queen', 279, 4, 'http://www.tvmaze.com/characters/210/arrow-moira-queen');
@@ -6070,11 +6069,8 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Emiko Queen', 221592, 4, 'http://www.tvmaze.com/characters/576239/arrow-emiko-queen');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (10433, 'LaMonica', 'Garrett', 'USA', 1, 'http://www.tvmaze.com/people/10433/lamonica-garrett');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Mar Novu / The Monitor', 10433, 4, 'http://www.tvmaze.com/characters/573399/arrow-mar-novu-the-monitor');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (10897, 'Rick', 'Gonzalez', 'USA', 1, 'http://www.tvmaze.com/people/10897/rick-gonzalez');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Rene Ramirez (Earth Two)', 10897, 4, 'http://www.tvmaze.com/characters/667457/arrow-rene-ramirez-earth-two');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (34387, 'Juliana', 'Harkavy', 'USA', 2, 'http://www.tvmaze.com/people/34387/juliana-harkavy');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Sergeant Dinah Drake (Earth Two)', 34387, 4, 'http://www.tvmaze.com/characters/667458/arrow-sergeant-dinah-drake-earth-two');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (10433, 'LaMonica', 'Garrett', 'USA', 1, 'http://www.tvmaze.com/people/10433/lamonica-garrett');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Mobius / The Anti-Monitor', 10433, 4, 'http://www.tvmaze.com/characters/689750/arrow-mobius-the-anti-monitor');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (664, 'Michelle', 'Monaghan', 'USA', 2, 'http://www.tvmaze.com/people/664/michelle-monaghan');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Maggie Hart', 664, 5, 'http://www.tvmaze.com/characters/559/true-detective-maggie-hart');
@@ -6590,7 +6586,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Sam Wilson / Falcon', 104395, 41749, 'http://www.tvmaze.com/characters/617742/the-falcon-and-the-winter-soldier-sam-wilson-falcon');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (154639, 'Daniel', 'Brühl', 'ESP', 1, 'http://www.tvmaze.com/people/154639/daniel-bruhl');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Helmut Zemo', 154639, 41749, 'http://www.tvmaze.com/characters/645208/the-falcon-and-the-winter-soldier-helmut-zemo');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (1180, 'Emily', 'VanCamp', 'CAN', 2, 'http://www.tvmaze.com/people/1180/emily-vancamp');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Sharon Carter', 1180, 41749, 'http://www.tvmaze.com/characters/666327/the-falcon-and-the-winter-soldier-sharon-carter');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (39663, 'Wyatt', 'Russell', 'USA', 1, 'http://www.tvmaze.com/people/39663/wyatt-russell');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('John Walker / U.S. Agent', 39663, 41749, 'http://www.tvmaze.com/characters/666328/the-falcon-and-the-winter-soldier-john-walker-us-agent');
@@ -6600,7 +6595,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Peggy Carter / Captain Carter', 6229, 41750, 'http://www.tvmaze.com/characters/666333/marvels-what-if-peggy-carter-captain-carter');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (16426, 'Michael', 'Jordan', 'USA', 1, 'http://www.tvmaze.com/people/16426/michael-b-jordan');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Erik Stevens', 16426, 41750, 'http://www.tvmaze.com/characters/666334/marvels-what-if-erik-stevens');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (3005, 'Sebastian', 'Stan', 'ROU', 1, 'http://www.tvmaze.com/people/3005/sebastian-stan');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Bucky Barnes', 3005, 41750, 'http://www.tvmaze.com/characters/666335/marvels-what-if-bucky-barnes');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (55986, 'Josh', 'Brolin', 'USA', 1, 'http://www.tvmaze.com/people/55986/josh-brolin');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Thanos', 55986, 41750, 'http://www.tvmaze.com/characters/666336/marvels-what-if-thanos');
@@ -6648,7 +6642,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Taserface', 7140, 41750, 'http://www.tvmaze.com/characters/666358/marvels-what-if-taserface');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (46570, 'Junko', 'Takeuchi', 'JPN', 2, 'http://www.tvmaze.com/people/46570/junko-takeuchi');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Naruto Uzumaki', 46570, 495, 'http://www.tvmaze.com/characters/81903/naruto-naruto-uzumaki');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (46570, 'Junko', 'Takeuchi', 'JPN', 2, 'http://www.tvmaze.com/people/46570/junko-takeuchi');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Akamaru', 46570, 495, 'http://www.tvmaze.com/characters/81904/naruto-akamaru');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (46586, 'Noriaki', 'Sugiyama', 'JPN', 1, 'http://www.tvmaze.com/people/46586/noriaki-sugiyama');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Sasuke Uchiha', 46586, 495, 'http://www.tvmaze.com/characters/81905/naruto-sasuke-uchiha');
@@ -6660,7 +6653,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Jiraiya', 46585, 495, 'http://www.tvmaze.com/characters/81908/naruto-jiraiya');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (46582, 'Masako', 'Katsuki', 'JPN', 2, 'http://www.tvmaze.com/people/46582/masako-katsuki');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Tsunade', 46582, 495, 'http://www.tvmaze.com/characters/81909/naruto-tsunade');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (46582, 'Masako', 'Katsuki', 'JPN', 2, 'http://www.tvmaze.com/people/46582/masako-katsuki');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Fifth Hokage', 46582, 495, 'http://www.tvmaze.com/characters/81910/naruto-fifth-hokage');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (47395, 'Hidekatsu', 'Shibata', 'JPN', 1, 'http://www.tvmaze.com/people/47395/hidekatsu-shibata');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Sarutobi', 47395, 495, 'http://www.tvmaze.com/characters/81911/naruto-sarutobi');
@@ -6710,7 +6702,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Pakkun', 116889, 495, 'http://www.tvmaze.com/characters/81933/naruto-pakkun');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (5375, 'Unshō', 'Ishizuka', 'JPN', 1, 'http://www.tvmaze.com/people/5375/unsho-ishizuka');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Zabuza Momochi', 5375, 495, 'http://www.tvmaze.com/characters/81934/naruto-zabuza-momochi');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (47395, 'Hidekatsu', 'Shibata', 'JPN', 1, 'http://www.tvmaze.com/people/47395/hidekatsu-shibata');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Third Hokage', 47395, 495, 'http://www.tvmaze.com/characters/81935/naruto-third-hokage');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (139466, 'Kaneta', 'Kimotsuki', 'N/A', 0, 'http://www.tvmaze.com/people/139466/kaneta-kimotsuki');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Gian', 139466, 19268, 'http://www.tvmaze.com/characters/308673/doraemon-gian');
@@ -6718,7 +6709,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Doraemon', 125483, 19268, 'http://www.tvmaze.com/characters/308674/doraemon-doraemon');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (139467, 'Masako', 'Ebisu', 'N/A', 0, 'http://www.tvmaze.com/people/139467/masako-ebisu');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Shizuka', 139467, 19268, 'http://www.tvmaze.com/characters/308675/doraemon-shizuka');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (125485, 'Masako', 'Nozawa', 'JPN', 2, 'http://www.tvmaze.com/people/125485/masako-nozawa');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Doraemon', 125485, 19268, 'http://www.tvmaze.com/characters/308676/doraemon-doraemon');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (139468, 'Noriko', 'Ohara', 'JPN', 2, 'http://www.tvmaze.com/people/139468/noriko-ohara');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Nobitas Mom', 139468, 19268, 'http://www.tvmaze.com/characters/308677/doraemon-nobitas-mom');
@@ -6792,7 +6782,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Zuko', 5463, 555, 'http://www.tvmaze.com/characters/85930/avatar-the-last-airbender-zuko');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (35564, 'Dee', 'Baker', 'USA', 1, 'http://www.tvmaze.com/people/35564/dee-bradley-baker');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Appa', 35564, 555, 'http://www.tvmaze.com/characters/85931/avatar-the-last-airbender-appa');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (35564, 'Dee', 'Baker', 'USA', 1, 'http://www.tvmaze.com/people/35564/dee-bradley-baker');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Momo', 35564, 555, 'http://www.tvmaze.com/characters/85932/avatar-the-last-airbender-momo');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (86522, 'Grey', 'Griffin', 'USA', 2, 'http://www.tvmaze.com/people/86522/grey-griffin');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Azula', 86522, 555, 'http://www.tvmaze.com/characters/85934/avatar-the-last-airbender-azula');
@@ -6802,7 +6791,6 @@ INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Ty Lee', 49194, 555, 'http://www.tvmaze.com/characters/85936/avatar-the-last-airbender-ty-lee');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (35596, 'Justin', 'Roiland', 'USA', 1, 'http://www.tvmaze.com/people/35596/justin-roiland');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Rick Sanchez', 35596, 216, 'http://www.tvmaze.com/characters/56241/rick-and-morty-rick-sanchez');
-INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (35596, 'Justin', 'Roiland', 'USA', 1, 'http://www.tvmaze.com/people/35596/justin-roiland');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Morty Smith', 35596, 216, 'http://www.tvmaze.com/characters/56245/rick-and-morty-morty-smith');
 INSERT INTO actors (id, first_name, last_name, nationality, gender, link) VALUES (22920, 'Spencer', 'Grammer', 'USA', 2, 'http://www.tvmaze.com/people/22920/spencer-grammer');
 INSERT INTO characters (character_name, actor_id, series_id, link) VALUES ('Summer Smith', 22920, 216, 'http://www.tvmaze.com/characters/56243/rick-and-morty-summer-smith');
