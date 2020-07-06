@@ -1,4 +1,5 @@
 import requests
+from numba import njit
 from iso639 import to_iso639_1
 
 def sqr(s):
@@ -33,6 +34,7 @@ def get_series(i):
     except:
         pass
 
+@njit
 def get_episodes(i):
     """
     Get tv series' episodes then make sql statement to insert into table episodes
@@ -64,6 +66,7 @@ def to_iso_3166_alpha_3(country):
     return countries.get(country)[2]
 
 
+@njit
 def get_creators(i):
     """
     Get tv series' creators then make sql statement to insert into table creators
@@ -91,6 +94,7 @@ def get_creators(i):
         pass
 
 
+@njit
 def get_actors_characters(series_list):
     """
     Get tv series' actors and characters
@@ -130,6 +134,7 @@ def get_genres():
     f"('Food'), ('History'), ('Horror'), ('Legal'), ('Medical'), ('Music'), ('Mystery'), "\
     f"('Nature'), ('Romance'), ('Science-Fiction'), ('Supernatural'), ('Thriller'), ('Travel'), ('War'), ('Western');\n"
 
+@njit
 def get_genres_id(i):
 	try:
 		sql = f""
@@ -149,7 +154,8 @@ def get_genres_id(i):
 	except:
 	 	pass
 
-if __name__ == '__main__':
+@njit
+def main():
     f = open('insert_into_tables.sql', 'w', encoding = 'utf-8')
     f.write(get_genres())
     series_list = list(range(1,11))
@@ -163,3 +169,6 @@ if __name__ == '__main__':
 
     f.write(get_actors_characters(series_list))
     f.close()
+
+if __name__ == '__main__':
+    main()
