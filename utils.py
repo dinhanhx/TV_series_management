@@ -73,11 +73,12 @@ def get_creators(i):
         data = list(filter(lambda person: person['type'] == 'Creator', data))
         sql = ''
         for person in data:
+            p = person['person']
             sql += f"INSERT INTO creators (id, first_name, last_name, nationality, gender, " \
-            f"link) VALUES ({person['id']}, '{sqr(person['name'].split()[0])}', '{sqr(person['name'].split()[-1])}', " \
-            f"'{get_code(person['country'])}', {to_iso_5218(person['gender'])}, " \
-            f"'{person['url']}');\n"
-            sql += f"INSERT INTO series_creators (series_id, creator_id) VALUES ({i}, {person['id']});\n"
+            f"link) VALUES ({p['id']}, '{sqr(p['name'].split()[0])}', '{sqr(p['name'].split()[-1])}', " \
+            f"'{get_code(p['country'])}', {to_iso_5218(p['gender'])}, " \
+            f"'{p['url']}');\n"
+            sql += f"INSERT INTO series_creators (series_id, creator_id) VALUES ({i}, {p['id']});\n"
         return sql
 
     except:
@@ -104,7 +105,7 @@ def get_actors_characters(series_list):
                 counter = counter + 1
                 person = data['person']
                 sql = sql + f"INSERT INTO actors (id, first_name, last_name, nationality, " \
-                f"gender, link) VALUES ({data['id']}, '{sqr(person['name'].split()[0])}', '{sqr(person['name'].split()[-1])}', " \
+                f"gender, link) VALUES ({person['id']}, '{sqr(person['name'].split()[0])}', '{sqr(person['name'].split()[-1])}', " \
                 f"'{get_code(person['country'])}', {to_iso_5218(person['gender'])}, '{person['url']}');\n"
 
                 character = data['character']
