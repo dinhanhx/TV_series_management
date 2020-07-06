@@ -18,12 +18,18 @@ def get_series(i):
 
         return 'X'
 
+    def get_rating(rating):
+        if rating is not None:
+            return rating
+        else:
+            return 0.0
+
     try:
         r = requests.get(f'http://api.tvmaze.com/shows/{i}')
         data = r.json()
         return f"INSERT INTO series (id, title, lang, current_status, rating, link) " \
                 f"VALUES ({data['id']}, '{sqr(data['name'])}', '{to_iso639_1(data['language'])}', " \
-                f"'{get_status(data['status'])}', {data['rating']['average']}, '{data['url']}');\n"
+                f"'{get_status(data['status'])}', {get_rating(data['rating']['average'])}, '{data['url']}');\n"
     except:
         pass
 
@@ -110,7 +116,7 @@ def get_actors_characters(series_list):
 
                 character = data['character']
                 sql = sql + f"INSERT INTO characters (character_name, actor_id, series_id, link) " \
-                f"VALUES ('{sqr(character['name'])}', {counter}, {i}, '{character['url']}');\n"
+                f"VALUES ('{sqr(character['name'])}', {person['id']}, {i}, '{character['url']}');\n"
 
 
         except:
