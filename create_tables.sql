@@ -22,7 +22,7 @@ CREATE TABLE series (
 
 CREATE TABLE episodes (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    series_id INT,
+    series_id INT NOT NULL,
     episode_name VARCHAR(100),
     episode_number INT,
     season_number INT,
@@ -78,28 +78,35 @@ CREATE TABLE series_creators (
 
 ALTER TABLE episodes
 ADD CONSTRAINT FK_episodes_series
-FOREIGN KEY (series_id) REFERENCES series(id);
+FOREIGN KEY (series_id) REFERENCES series(id)
+ON DELETE CASCADE;
 
 ALTER TABLE characters
 ADD CONSTRAINT FK_characters_actors
-FOREIGN KEY (actor_id) REFERENCES actors(id);
+FOREIGN KEY (actor_id) REFERENCES actors(id)
+ON DELETE CASCADE;
 
 ALTER TABLE characters
 ADD CONSTRAINT FK_characters_series
-FOREIGN KEY (series_id) REFERENCES series(id);
+FOREIGN KEY (series_id) REFERENCES series(id)
+ON DELETE CASCADE;
 
 ALTER TABLE series_genres
 ADD CONSTRAINT FK_series_genres_L
-FOREIGN KEY (series_id) REFERENCES series(id);
+FOREIGN KEY (series_id) REFERENCES series(id)
+ON DELETE CASCADE;
 
 ALTER TABLE series_genres
 ADD CONSTRAINT FK_series_genres_R
-FOREIGN KEY (genre_id) REFERENCES genres(id);
+FOREIGN KEY (genre_id) REFERENCES genres(id)
+ON DELETE CASCADE;
 
 ALTER TABLE series_creators
 ADD CONSTRAINT FK_series_creators_L
-FOREIGN KEY (series_id) REFERENCES series(id);
+FOREIGN KEY (series_id) REFERENCES series(id)
+ON DELETE CASCADE;
 
 ALTER TABLE series_creators
 ADD CONSTRAINT FK_series_creators_R
-FOREIGN KEY (creator_id) REFERENCES creators(id);
+FOREIGN KEY (creator_id) REFERENCES creators(id)
+ON DELETE CASCADE;
